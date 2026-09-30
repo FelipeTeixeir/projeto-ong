@@ -8,20 +8,23 @@
 </head>
 <body>
 
+    <a href="#conteudo" class="pular-link">Pular para o conteúdo</a>
+
     <header>
         <div class="container">
-            <h1>ONG</h1>
-            <nav>
+            <a href="index.html" class="logo">ONG</a>
+            <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="projetos.html" aria-current="page">Projetos</a></li>
                     <li><a href="cadastro.html">Cadastro</a></li>
                 </ul>
             </nav>
+            <button type="button" id="botao-contraste" class="botao-contraste" aria-pressed="false">Alto contraste</button>
         </div>
     </header>
 
-    <main>
+    <main id="conteudo" tabindex="-1">
         <!-- Bloco: Introdução às Frentes de Atuação -->
         <section id="projetos" class="projetos-intro">
             <div class="container">
@@ -79,5 +82,6 @@
         </div>
     </footer>
 
+    <script src="js/acessibilidade.js"></script>
 </body>
 </html>

@@ -10,6 +10,45 @@ legend { font-weight: bold; padding: 0 8px; }
 .campo { margin-bottom: 12px; display: flex; flex-direction: column; }
 .campo.checkbox { flex-direction: row; align-items: center; gap: 8px; }
 label { font-weight: 600; margin-bottom: 4px; }
-input, select { padding: 8px; border: 1px solid #999; border-radius: 4px; }
+input, select { padding: 8px; border: 1px solid #767676; border-radius: 4px; }
 button { background: #1b4332; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
 footer { text-align: center; padding: 20px; background: #eee; margin-top: 40px; }
+
+/* ===== Acessibilidade ===== */
+
+/* Cabeçalho: logo, menu e botão de contraste */
+header .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.logo { color: #fff; font-size: 1.8rem; font-weight: bold; text-decoration: none; }
+header nav a[aria-current="page"] { text-decoration: underline; font-weight: bold; }
+
+/* Link "Pular para o conteúdo": fica escondido e aparece quando recebe o foco pelo Tab */
+.pular-link { position: absolute; left: -9999px; top: 0; background: #fff; color: #1b4332; padding: 10px 16px; font-weight: bold; z-index: 100; }
+.pular-link:focus { left: 10px; top: 10px; }
+
+/* Destaque de foco para quem navega pelo teclado */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #e8590c; outline-offset: 2px; }
+main:focus { outline: none; }
+
+/* Botão de alto contraste */
+.botao-contraste { background: #fff; color: #1b4332; border: 2px solid #fff; font-weight: bold; }
+
+/* Dicas de formato do formulário */
+.dica { color: #555; font-size: 0.9rem; margin-top: 4px; }
+
+/* ===== Modo alto contraste ===== */
+body.alto-contraste { background: #000; color: #fff; }
+body.alto-contraste header,
+body.alto-contraste footer { background: #000; color: #fff; border-bottom: 2px solid #ff0; }
+body.alto-contraste a,
+body.alto-contraste header nav a,
+body.alto-contraste .logo { color: #ff0; text-decoration: underline; }
+body.alto-contraste .dica { color: #fff; }
+body.alto-contraste fieldset { border-color: #fff; }
+body.alto-contraste input,
+body.alto-contraste select { background: #000; color: #fff; border: 2px solid #fff; }
+body.alto-contraste button,
+body.alto-contraste .botao-contraste { background: #ff0; color: #000; border: 2px solid #ff0; }
+body.alto-contraste a:focus-visible,
+body.alto-contraste button:focus-visible,
+body.alto-contraste input:focus-visible,
+body.alto-contraste select:focus-visible { outline-color: #0ff; }
