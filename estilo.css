@@ -26,7 +26,7 @@ header nav a[aria-current="page"] { text-decoration: underline; font-weight: bol
 .pular-link:focus { left: 10px; top: 10px; }
 
 /* Destaque de foco para quem navega pelo teclado */
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #f4a261; outline-offset: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #e8590c; outline-offset: 2px; }
 main:focus { outline: none; }
 
 /* Botão de alto contraste */
